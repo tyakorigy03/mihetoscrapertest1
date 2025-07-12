@@ -10,7 +10,7 @@ const updateMovieScores=require("./utils/updateScoresWithSupabase")
 
 const SITE_KEY = 'agasobanuyelive';
 const WELCOME_INTERVAL_MINUTES = 120;
-const ALL_INTERVAL_DAYS = 30;
+const ALL_INTERVAL_DAYS = 360;
 
 /**
  * Check if there are any failed movies that need retrying
@@ -53,7 +53,7 @@ async function hasFailedItems() {
 
     }
 
-    // Step 3: Run full scrape once every 7 days
+    // Step 3: Run full scrape once every 360 days
     else if (now - lastAll >= sevenDays) {
       logInfo('📅 Weekly full scrape (all mode)...');
       await runAgasobanuyeliveScraper('all', 'patch');
