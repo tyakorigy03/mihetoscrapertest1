@@ -1,0 +1,33 @@
+name: Run Puppeteer Scraper and Commit Output
+
+on:
+  workflow_dispatch: # manual trigger
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📦 Checkout repo
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 📥 Install dependencies
+        run: npm install
+
+      - name: 🕸️ Run scraper
+        run: npm run scrape
+
+      - name: 📝 Commit output.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output.json
+          git commit -m "🤖 Update scraped output [skip ci]" || echo "No changes to commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
