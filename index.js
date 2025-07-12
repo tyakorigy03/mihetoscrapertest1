@@ -56,7 +56,7 @@ async function hasFailedItems() {
     // Step 3: Run full scrape once every 360 days
     else if (now - lastAll >= sevenDays) {
       logInfo('📅 Weekly full scrape (all mode)...');
-      await runAgasobanuyeliveScraper('all', 'patch');
+      // await runAgasobanuyeliveScraper('all', 'patch');
       runState.lastAllRun = now;
     }else if(now-lastScoreUpdate>=scoreUpdateInterval){
      await updateMovieScores()
