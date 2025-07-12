@@ -1,16 +1,30 @@
 {
-  "name": "puppeteer-scraper-test",
-  "version": "1.0.0",
-  "description": "",
-   "main": "scraper.js",
-  "scripts": {
-    "scrape": "node scraper.js"
+  "name": "miheto2.0scraper",
+  "version": "2.0.0",
+  "description": "movie scraper",
+  "homepage": "https://github.com/tyakorigy03/moviescraperv2#readme",
+  "bugs": {
+    "url": "https://github.com/tyakorigy03/moviescraperv2/issues"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyakorigy03/moviescraperv2.git"
+  },
   "license": "ISC",
+  "author": "tyak origy",
   "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scrape":"node index.js"
+  },
   "dependencies": {
-    "puppeteer": "^24.12.1"
+    "@supabase/supabase-js": "^2.50.2",
+    "axios": "^1.10.0",
+    "dotenv": "^17.0.0",
+    "firebase-admin": "^13.4.0",
+    "fs-extra": "^11.3.0",
+    "fuse.js": "^7.1.0",
+    "puppeteer": "^24.11.1"
   }
 }
