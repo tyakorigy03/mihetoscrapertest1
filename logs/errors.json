@@ -22,5 +22,13 @@
   {
     "message": "❌ Failed: taken review: Navigation timeout of 30000 ms exceeded",
     "timestamp": "2025-07-31T16:52:34.006Z"
+  },
+  {
+    "message": "❌ Failed to scrape https://agasobanuyelive.com/category/serie/page/1/: Navigation timeout of 30000 ms exceeded",
+    "timestamp": "2025-07-31T17:14:14.634Z"
+  },
+  {
+    "message": "❌ Failed to scrape https://agasobanuyelive.com/category/movie/page/1/: Navigation timeout of 30000 ms exceeded",
+    "timestamp": "2025-07-31T17:14:45.178Z"
   }
 ]
