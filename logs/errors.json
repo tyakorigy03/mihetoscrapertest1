@@ -30,5 +30,9 @@
   {
     "message": "❌ Failed to scrape https://agasobanuyelive.com/category/movie/page/1/: Navigation timeout of 30000 ms exceeded",
     "timestamp": "2025-07-31T17:14:45.178Z"
+  },
+  {
+    "message": "❌ Error updating relevance scores:",
+    "timestamp": "2025-08-02T21:10:04.638Z"
   }
 ]
