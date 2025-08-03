@@ -34,5 +34,17 @@
   {
     "message": "❌ Error updating relevance scores:",
     "timestamp": "2025-08-02T21:10:04.638Z"
+  },
+  {
+    "message": "❌ Failed: badland hunters review: Navigation timeout of 30000 ms exceeded",
+    "timestamp": "2025-08-03T15:11:59.421Z"
+  },
+  {
+    "message": "❌ Failed: bait review: Navigation timeout of 30000 ms exceeded",
+    "timestamp": "2025-08-03T15:12:30.107Z"
+  },
+  {
+    "message": "❌ Failed: final destination bloodlines review 2: Navigation timeout of 30000 ms exceeded",
+    "timestamp": "2025-08-03T15:13:00.659Z"
   }
 ]
