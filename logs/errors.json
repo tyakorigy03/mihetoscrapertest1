@@ -46,5 +46,13 @@
   {
     "message": "❌ Failed: final destination bloodlines review 2: Navigation timeout of 30000 ms exceeded",
     "timestamp": "2025-08-03T15:13:00.659Z"
+  },
+  {
+    "message": "❌ Failed to scrape https://agasobanuyelive.com/category/serie/page/1/: Navigation timeout of 30000 ms exceeded",
+    "timestamp": "2025-08-04T21:12:04.000Z"
+  },
+  {
+    "message": "❌ Failed to scrape https://agasobanuyelive.com/category/movie/page/1/: Navigation timeout of 30000 ms exceeded",
+    "timestamp": "2025-08-04T21:12:34.985Z"
   }
 ]
