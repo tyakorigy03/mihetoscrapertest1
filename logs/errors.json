@@ -54,5 +54,9 @@
   {
     "message": "❌ Failed to scrape https://agasobanuyelive.com/category/movie/page/1/: Navigation timeout of 30000 ms exceeded",
     "timestamp": "2025-08-04T21:12:34.985Z"
+  },
+  {
+    "message": "Failed inserting batch 1: invalid input syntax for type timestamp with time zone: \"\"",
+    "timestamp": "2025-08-05T03:10:06.191Z"
   }
 ]
