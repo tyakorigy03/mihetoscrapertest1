@@ -78,5 +78,9 @@
   {
     "message": "Failed inserting batch 1: invalid input syntax for type timestamp with time zone: \"\"",
     "timestamp": "2025-08-06T20:46:49.891Z"
+  },
+  {
+    "message": "Failed inserting batch 1: invalid input syntax for type timestamp with time zone: \"\"",
+    "timestamp": "2025-08-06T22:49:14.827Z"
   }
 ]
