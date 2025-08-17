@@ -2,6 +2,7 @@ const supabase = require('./supabaseClient');
 const { computeRelevanceScore } = require('../utils/relevanceScore');
 const { loadScraperState, saveScraperState } = require('../utils/stateManager');
 const { logInfo, logError } = require("../utils/logger");
+const { link } = require('fs-extra');
 
 const SITE_KEY = 'agasobanuyelive';
 
@@ -26,6 +27,9 @@ function deduplicateByLink(movies) {
  *
  * @param {Array<Object>} movies - List of movie objects to save
  */
+function normalizeLink(url) {
+  return url.replace(/^https?:\/\/(www\.)?/, 'https://');
+}
 async function saveMoviesToSupabase(movies) {
   const batchSize = 200;
   let count = 0;
@@ -39,7 +43,8 @@ async function saveMoviesToSupabase(movies) {
     const toInsert = uniqueChunk.map(movie => {
       return {
         ...movie,
-        score: computeRelevanceScore({
+          link: normalizeLink(movie.link) || '',
+          score: computeRelevanceScore({
           tmdb_rating: movie.tmdb_rating || 0,
           popularity: movie.popularity || 0,
           publishedAt: movie.publishedAt || '',
@@ -61,12 +66,10 @@ async function saveMoviesToSupabase(movies) {
     } else {
       count += data.length;
       logInfo(`✅ Saved ${count} movies so far...`);
-
       // After successful save, update local state saved flags:
       await markMoviesAsSavedInState(uniqueChunk.map(m => m.link));
     }
   }
-
   logInfo(`🎉 Finished saving ${count} movies to Supabase.`);
 }
 
